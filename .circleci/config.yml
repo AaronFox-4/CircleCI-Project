@@ -2,12 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/python:jessie-node-browsers
     steps:
       - checkout
       - run: mkdir test-reports
       - run: sudo pip install selenium
       - run: sudo pip install unittest2
-      - run: browser-tools/install-chromedriver
       - run: 
           command: python TestCase.py
