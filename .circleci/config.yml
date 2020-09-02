@@ -8,5 +8,6 @@ jobs:
       - run: mkdir test-reports
       - run: sudo pip install selenium
       - run: sudo pip install unittest2
+      - run: browser-tools/install-chromedriver
       - run: 
           command: python TestCase.py
