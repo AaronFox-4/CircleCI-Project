@@ -18,7 +18,10 @@ class TestCase(unittest.TestCase):
         
         #Assertion to validate our javascript function was successful to change the text.
         element = driver.find_element_by_id("js-example").text
-        assert element == 'JavaScript has changed this text!'
+        if(assert element == 'JavaScript has changed this text!')
+            print('Test has been been a success')
+        else 
+            print('Test has not been successful, JS function not triggered')
         
         driver.close()
 
